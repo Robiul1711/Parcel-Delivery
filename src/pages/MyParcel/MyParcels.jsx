@@ -13,14 +13,14 @@ const MyParcels = () => {
   ];
 
   return (
-    <div className="section-padding-x py-8">
+    <div className="section-padding-x py-6">
       {/* Tabs */}
       <div className="flex gap-4">
         {tabs.map((tab) => (
           <button
             key={tab.label}
             onClick={() => setActiveTab(tab.label)}
-            className={`px-14 py-4 rounded-[10px] shadow-custom text-2xl duration-300 ease-in-out border border-[#fff] 
+            className={`px-14 py-3 rounded-[10px] shadow-custom text-lg lg:text-xl duration-300 ease-in-out border border-[#fff] 
               ${
                 activeTab === tab.label
                   ? "bg-[#737373] text-white"
