@@ -14,6 +14,8 @@ import leg from "../../assets/images/leg.png";
 import user from "../../assets/images/user.png";
 import user1 from "../../assets/images/user1.png";
 import faq from "../../assets/images/faq.png";
+import group from "../../assets/images/group.png";
+import group1 from "../../assets/images/group1.png";
 const ImageProvider = {
   logo,
   banner,
@@ -31,5 +33,7 @@ const ImageProvider = {
   user,
   user1,
   faq,
+  group,
+  group1,
 };
 export default ImageProvider;
