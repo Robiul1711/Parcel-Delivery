@@ -16,6 +16,9 @@ import user1 from "../../assets/images/user1.png";
 import faq from "../../assets/images/faq.png";
 import group from "../../assets/images/group.png";
 import group1 from "../../assets/images/group1.png";
+import file from "../../assets/images/file.png";
+import forgot from "../../assets/images/forgot.png";
+import reset from "../../assets/images/reset.png";
 const ImageProvider = {
   logo,
   banner,
@@ -35,5 +38,8 @@ const ImageProvider = {
   faq,
   group,
   group1,
+  file,
+  forgot,
+  reset,
 };
 export default ImageProvider;
