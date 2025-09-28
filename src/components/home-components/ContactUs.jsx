@@ -56,9 +56,9 @@ const ContactUs = () => {
         your business
       </p>
       <div ref={btnRef} className="flex justify-center mt-4">
-        <button className="flex items-center gap-2 lg:gap-4 mt-4 bg-custom-secondary py-3 px-6 rounded-full font-medium cursor-pointer hover:bg-custom-primary hover:text-white transition-all duration-300 ease-in-out">
+        <button className="group flex items-center gap-2 lg:gap-4 mt-4 bg-custom-secondary py-3 px-6 rounded-full font-medium cursor-pointer hover:bg-custom-primary hover:text-white transition-all duration-300 ease-in-out">
           Contact Us
-          <span className="bg-custom-primary p-2 rounded-full text-white">
+          <span className="bg-custom-primary p-2 rounded-full text-white transition-all duration-300 transform group-hover:translate-x-2">
             <PiEnvelopeSimpleThin size={22} />
           </span>
         </button>
