@@ -47,3 +47,38 @@ export const Logo = (props) => {
     </svg>
   );
 };
+
+export const Upload = (props) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="25"
+      height="24"
+      viewBox="0 0 25 24"
+      fill="none"
+      {...props}
+    >
+      <path
+        d="M21.0947 16.9983L20.2243 18.7393C19.5648 20.0581 18.2169 20.8912 16.7423 20.8912H7.92906C6.45454 20.8912 5.10657 20.0581 4.44714 18.7393L3.57666 16.9983"
+        stroke="black"
+        stroke-width="1.94645"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M12.3353 15.0518L12.3353 3.37304L16.4229 7.46059"
+        stroke="black"
+        stroke-width="1.94645"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M12.3354 3.3729L8.2479 7.46045"
+        stroke="black"
+        stroke-width="1.94645"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+};

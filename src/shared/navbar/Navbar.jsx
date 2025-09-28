@@ -118,14 +118,14 @@ const Navbar = () => {
             <div className="hidden lg:flex justify-center items-center gap-1.5 xlg:gap-4">
               <Link
                 to="/select-travelar"
-                className={`flex items-center gap-3 px-4 py-1.5 text-[15px] font-medium rounded-full border border-gray-300 cursor-pointer bg-white hover:text-white hover:bg-custom-primary duration-300 ${
+                className={`group flex items-center gap-3 px-4 py-1.5 text-[15px] font-medium rounded-full border border-gray-300 cursor-pointer bg-white hover:text-white hover:bg-custom-primary duration-300 ${
                   scrolled
                     ? "text-black border-white"
                     : "text-black border-black"
                 }`}
               >
                 Log in
-                <p className="bg-custom-primary text-white p-1 rounded-full">
+                <p className="bg-custom-primary text-white p-1 rounded-full transition-all duration-300 transform group-hover:translate-x-2">
                   <Arrow className="w-6 h-6" />
                 </p>
               </Link>
