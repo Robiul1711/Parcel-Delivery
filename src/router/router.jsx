@@ -8,8 +8,10 @@ import ResetPassword from "@/pages/auth/ResetPassword";
 import SelectTravelar from "@/pages/auth/SelectTravelar";
 import SetupPersonalInformation from "@/pages/auth/SetupPersonalInformation";
 import SignUp from "@/pages/auth/SignUp";
+import Messages from "@/pages/chat/Messages";
 import Home from "@/pages/home/Home";
 import MyParcels from "@/pages/MyParcel/MyParcels";
+import SendParcel from "@/pages/send-parcel/SendParcel";
 
 import { createBrowserRouter } from "react-router-dom";
 
@@ -29,6 +31,14 @@ const router = createBrowserRouter([
       {
         path: "/profile-settings",
         element: <ProfileSettings />,
+      },
+      {
+        path: "/messages",
+        element: <Messages />,
+      },
+      {
+        path: "/send-parcel",
+        element: <SendParcel />,
       },
     ],
   },
