@@ -55,7 +55,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 section-padding-x right-0 z-50 w-full transition-all duration-300 ${
+        className={`sticky top-0 left-0 section-padding-x right-0 z-50 w-full transition-all duration-300 ${
           scrolled
             ? "bg-custom-secondary shadow-md pt-1.5"
             : "bg-custom-secondary py-2"
