@@ -4,10 +4,12 @@ import ChangePasswordModal from "./ChangePasswordModal";
 import LogoutModal from "./LogoutModal";
 import { FaAngleLeft } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import AddCardModal from "../common/AddCardModal";
 
 const ProfileSettings = () => {
   const [openPasswordModal, setOpenPasswordModal] = useState(false);
   const [openLogoutModal, setOpenLogoutModal] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleLogout = () => {
     console.log("User logged out");
@@ -100,9 +102,10 @@ const ProfileSettings = () => {
           <label className="block text-sm font-medium text-gray-600 mb-1">
             Cards
           </label>
-        <button className="px-4 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-[#E8F0FB]">
+        <button onClick={() => setIsModalOpen(true)} className="px-4 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-[#E8F0FB]">
           Add Card
         </button>
+        <AddCardModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
         </div>
       </div>
 
