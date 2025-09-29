@@ -95,7 +95,7 @@ const OffersDialog = ({ closeModal }) => {
 
   return (
     <div
-      className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50"
+      className="fixed inset-0 bg-black/20 bg-opacity-40 flex items-center justify-center z-50"
       onClick={closeModal}
     >
       <div
@@ -124,25 +124,24 @@ const OffersDialog = ({ closeModal }) => {
               {/* Left Info */}
               <div className="flex  justify-between gap-3">
                 <div className="flex items-center gap-3">
-                <img
-                  src={offer.img}
-                  alt={offer.name}
-                  className="w-12 h-12 rounded-full object-cover"
-                />
-                <div>
-                  <h3 className="font-medium text-gray-900 flex items-center gap-2">
-                    {offer.name}
-                    <span className="flex items-center text-sm text-gray-700">
-                      <FaStar className="text-yellow-500 mr-1" />
-                      {offer.rating}
-                    </span>
-                  </h3>
-                  <p className="text-sm text-gray-600">
-                    Prize Offered:{" "}
-                    <span className="font-semibold">${offer.price}</span>
-                  </p>
-                </div>
-
+                  <img
+                    src={offer.img}
+                    alt={offer.name}
+                    className="w-12 h-12 rounded-full object-cover"
+                  />
+                  <div>
+                    <h3 className="font-medium text-gray-900 flex items-center gap-2">
+                      {offer.name}
+                      <span className="flex items-center text-sm text-gray-700">
+                        <FaStar className="text-yellow-500 mr-1" />
+                        {offer.rating}
+                      </span>
+                    </h3>
+                    <p className="text-sm text-gray-600">
+                      Prize Offered:{" "}
+                      <span className="font-semibold">${offer.price}</span>
+                    </p>
+                  </div>
                 </div>
                 <AiFillMessage className="text-2xl cursor-pointer" />
               </div>
@@ -155,7 +154,6 @@ const OffersDialog = ({ closeModal }) => {
                 <button className="px-4 py-1.5 rounded-md bg-orange-500 text-white hover:bg-orange-600 transition">
                   Accept
                 </button>
-        
               </div>
             </div>
           ))}

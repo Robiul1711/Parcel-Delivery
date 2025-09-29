@@ -3,14 +3,14 @@ import ImageProvider from "@/components/common/ImageProvider";
 import { Eye, EyeOff } from "lucide-react";
 import React, { useState } from "react";
 import { CgProfile } from "react-icons/cg";
-import PhoneInput from "react-phone-input-international";
-import "react-phone-input-international/lib/style.css";
 import { Link } from "react-router-dom";
+import "react-phone-input-2/lib/style.css";
+import PhoneInput from "react-phone-input-2";
 
 const SignUp = () => {
   const [image, setImage] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const [phone, setPhone] = useState("");
+  const [setValue] = useState("");
 
   const handleUploadImage = () => {
     document.getElementById("image_input").click();
@@ -116,9 +116,10 @@ const SignUp = () => {
               <label className="block font-medium mb-1">Phone Number</label>
               <PhoneInput
                 country={"bd"}
-                value={phone}
-                onChange={setPhone}
-                inputClass="!w-full !py-3 !px-12 !rounded-lg !border !focus:ring-2 !focus:ring-custom-primary"
+                inputClass="!w-full !bg-gray-100 !h-[48px] !px-16 !rounded-lg !border-none"
+                containerClass="!w-full !relative"
+                buttonClass="!pl-2 !pr-2 !border-none"
+                onChange={(value) => setValue("phone", value)}
               />
             </div>
 

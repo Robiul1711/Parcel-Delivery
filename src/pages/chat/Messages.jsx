@@ -88,7 +88,7 @@ const Messages = () => {
   );
 
   return (
-    <div className="section-padding-x flex flex-col md:flex-row gap-4 w-full p-5 h-[calc(100vh-100px)]">
+    <div className="section-padding-x flex flex-col md:flex-row gap-4 w-full p-5 lg:h-[calc(100vh-100px)]">
       {/* Sidebar */}
       <div
         className={`${
