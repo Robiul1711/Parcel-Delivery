@@ -96,7 +96,7 @@ const FAQ = () => {
           <img
             src={ImageProvider.faq}
             alt="image"
-            className="w-full h-[450px] object-contain bg-custom-secondary rounded-lg p-6 hover:shadow transition duration-200 ease-in-out"
+            className="w-full h-[350px] lg:h-[450px] object-contain bg-custom-secondary rounded-lg p-6 hover:shadow transition duration-200 ease-in-out"
           />
         </div>
         <div>

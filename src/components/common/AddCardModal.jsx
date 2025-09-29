@@ -1,5 +1,5 @@
+import { ChevronLeft } from "lucide-react";
 import React from "react";
-import { RxCross1 } from "react-icons/rx";
 
 const AddCardModal = ({ isModalOpen, setIsModalOpen }) => {
   return (
@@ -14,14 +14,16 @@ const AddCardModal = ({ isModalOpen, setIsModalOpen }) => {
         } w-[95%] sm:w-[80%] md:w-[50%] lg:w-[36%] dark:bg-slate-800 bg-white rounded-xl shadow-xl p-6 lg:px-10 transition-all duration-300`}
       >
         {/* Header */}
-        <div className="flex items-center justify-between border-b pb-4 mb-4">
-          <h2 className="text-2xl lg:text-3xl font-bold">Add Card</h2>
+        <div className="flex items-center border-b pb-4 mb-4">
           <button
-            className="p-2 text-xl dark:text-[#abc2d3]/70 dark:hover:bg-slate-900/50 hover:bg-[#e7e7e7] rounded-full transition-all duration-300 cursor-pointer"
+            className="border border-[#d1d1d1] p-2 text-xl dark:text-[#abc2d3]/70 dark:hover:bg-slate-900/50 hover:bg-[#e7e7e7] rounded-full transition-all duration-300 cursor-pointer"
             onClick={() => setIsModalOpen(false)}
           >
-            <RxCross1 />
+            <ChevronLeft />
           </button>
+          <h2 className="text-2xl lg:text-3xl font-bold flex-1 text-center">
+            Add Card
+          </h2>
         </div>
 
         {/* Form */}

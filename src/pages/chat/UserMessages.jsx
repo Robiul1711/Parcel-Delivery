@@ -388,7 +388,7 @@ const UserMessages = ({ selectedConversation, onBack }) => {
   return (
     <div className="border rounded-lg p-5 bg-white h-full flex flex-col">
       {/* Header */}
-      <div className="flex justify-between items-center border-b pb-3 mb-4">
+      <div className="flex flex-col lg:flex-row justify-between lg:items-center border-b pb-3 mb-4 gap-4">
         <div className="flex items-center gap-2">
           <button
             onClick={onBack}

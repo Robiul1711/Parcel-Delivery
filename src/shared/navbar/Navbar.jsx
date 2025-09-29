@@ -141,9 +141,9 @@ const Navbar = () => {
                 <FiX
                   className={`w-6 h-6 lg:size-8 ${
                     scrolled
-                      ? "text-white"
+                      ? "text-custom-primary"
                       : isHomePage
-                      ? "text-white"
+                      ? "text-custom-primary"
                       : "text-black"
                   }`}
                 />
@@ -151,9 +151,9 @@ const Navbar = () => {
                 <FiMenu
                   className={`w-6 h-6 lg:size-8 ${
                     scrolled
-                      ? "text-white"
+                      ? "text-custom-primary"
                       : isHomePage
-                      ? "text-white"
+                      ? "text-custom-primary"
                       : "text-black"
                   }`}
                 />
@@ -176,7 +176,7 @@ const Navbar = () => {
           className="flex items-center gap-2 cursor-pointer mb-6"
         >
           <img
-            className="w-7 lg:w-9 object-contain"
+            className="w-10 lg:w-12 object-contain"
             src={ImageProvider.logo}
             alt="logo"
           />
@@ -217,7 +217,7 @@ const Navbar = () => {
             to="/login"
             className={`flex items-center justify-center gap-2 px-4 py-2 text-[15px] rounded-full border font-medium cursor-pointer transition-all duration-300 ${
               scrolled
-                ? "text-white border-white hover:bg-white/10"
+                ? "text-custom-primary border-custom-primary hover:bg-white/10"
                 : "text-black border-black hover:bg-black/10"
             }`}
           >

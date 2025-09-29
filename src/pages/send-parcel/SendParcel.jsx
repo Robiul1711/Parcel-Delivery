@@ -11,12 +11,12 @@ const SendParcel = () => {
   ];
   return (
     <div className="section-padding-x py-6">
-      <div className="flex gap-4">
+      <div className="flex flex-wrap gap-4">
         {tabs.map((tab) => (
           <button
             key={tab.label}
             onClick={() => setActiveTab(tab.label)}
-            className={`px-14 py-3 rounded-[10px] shadow-custom text-lg duration-300 ease-in-out border
+            className={`px-14 py-3 rounded-[10px] shadow-custom lg:text-lg duration-300 ease-in-out border
               ${
                 activeTab === tab.label
                   ? "bg-[#737373] text-white"

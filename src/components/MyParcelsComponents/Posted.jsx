@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { MoreHorizontal } from "lucide-react";
-import parcel1 from "@/assets/images/parcel1.png";
 import OffersDialog from "./OffersDialog";
+import ImageProvider from "../common/ImageProvider";
 
 const fakeParcels = [
   {
     id: 1,
     title: "Domestic Parcels - BP&O",
+    image: ImageProvider.parcel1,
     weight: "11 kg",
     dimensions: "4ft, 5cm",
     priceRange: "10$ - 12$",
@@ -19,6 +20,7 @@ const fakeParcels = [
   {
     id: 2,
     title: "International Parcel - DHL",
+    image: ImageProvider.parcel2,
     weight: "20 kg",
     dimensions: "3ft, 8cm",
     priceRange: "25$ - 30$",
@@ -31,6 +33,7 @@ const fakeParcels = [
   {
     id: 3,
     title: "Domestic Parcel - FedEx",
+    image: ImageProvider.parcel3,
     weight: "5 kg",
     dimensions: "2ft, 3cm",
     priceRange: "8$ - 10$",
@@ -39,6 +42,45 @@ const fakeParcels = [
     destination: "Chicago, IL",
     comments: "No liquids allowed",
     offers: 12,
+  },
+  {
+    id: 4,
+    title: "Express Parcel - UPS",
+    image: ImageProvider.parcel4,
+    weight: "15 kg",
+    dimensions: "5ft, 6cm",
+    priceRange: "18$ - 22$",
+    pickupPeriod: "Apr 01 - Apr 05",
+    departure: "Miami, FL",
+    destination: "Orlando, FL",
+    comments: "Fragile, handle carefully",
+    offers: 30,
+  },
+  {
+    id: 5,
+    title: "Overnight Parcel - TNT",
+    image: ImageProvider.parcel,
+    weight: "8 kg",
+    dimensions: "3ft, 4cm",
+    priceRange: "12$ - 15$",
+    pickupPeriod: "May 05 - May 10",
+    departure: "Seattle, WA",
+    destination: "Portland, OR",
+    comments: "Keep upright",
+    offers: 20,
+  },
+  {
+    id: 6,
+    title: "Heavy Parcel - Local Courier",
+    image: ImageProvider.parcel2,
+    weight: "50 kg",
+    dimensions: "6ft, 10cm",
+    priceRange: "40$ - 50$",
+    pickupPeriod: "Jun 01 - Jun 10",
+    departure: "Houston, TX",
+    destination: "Dallas, TX",
+    comments: "Use lifting equipment",
+    offers: 15,
   },
 ];
 
@@ -67,7 +109,7 @@ const Posted = () => {
             {/* Image + Menu */}
             <div className="relative">
               <img
-                src={parcel1}
+                src={parcel.image} // dynamic image
                 alt="Parcel"
                 className="w-full h-52 object-cover rounded-2xl"
               />
@@ -81,25 +123,25 @@ const Posted = () => {
               <h2 className="text-2xl font-medium py-2.5">{parcel.title}</h2>
 
               <div className="grid grid-cols-2 gap-y-2 text-sm">
-                <p className="flex gap-1.5 flex-col text-[#333]">
+                <p className="flex flex-col gap-1.5 text-[#333]">
                   Estimated Weight:
                   <span className="font-medium text-black text-base">
                     {parcel.weight}
                   </span>
                 </p>
-                <p className="flex gap-1.5 flex-col text-[#333]">
+                <p className="flex flex-col gap-1.5 text-[#333]">
                   Dimensions:
                   <span className="font-medium text-black text-base">
                     {parcel.dimensions}
                   </span>
                 </p>
-                <p className="flex gap-1.5 flex-col text-[#333]">
+                <p className="flex flex-col gap-1.5 text-[#333]">
                   Price Range:
                   <span className="font-medium text-black text-base">
                     {parcel.priceRange}
                   </span>
                 </p>
-                <p className="flex gap-1.5 flex-col text-[#333]">
+                <p className="flex flex-col gap-1.5 text-[#333]">
                   Desired pick-up period:
                   <span className="font-medium text-black text-base">
                     {parcel.pickupPeriod}
@@ -108,19 +150,19 @@ const Posted = () => {
               </div>
 
               <div className="grid grid-cols-1 gap-y-2 text-sm mt-3">
-                <p className="flex gap-1.5 flex-col text-[#333]">
+                <p className="flex flex-col gap-1.5 text-[#333]">
                   Departure:
                   <span className="font-medium text-black text-base">
                     {parcel.departure}
                   </span>
                 </p>
-                <p className="flex gap-1.5 flex-col text-[#333]">
+                <p className="flex flex-col gap-1.5 text-[#333]">
                   Destination:
                   <span className="font-medium text-black text-base">
                     {parcel.destination}
                   </span>
                 </p>
-                <p className="flex gap-1.5 flex-col text-[#333]">
+                <p className="flex flex-col gap-1.5 text-[#333]">
                   Comments:
                   <span className="font-medium text-black text-base">
                     {parcel.comments}
@@ -144,10 +186,7 @@ const Posted = () => {
 
       {/* Modal */}
       {isOpen && selectedParcel && (
-        <OffersDialog
-          offers={selectedParcel.offers}
-          closeModal={closeModal}
-        />
+        <OffersDialog offers={selectedParcel.offers} closeModal={closeModal} />
       )}
     </>
   );
