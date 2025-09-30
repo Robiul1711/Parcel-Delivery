@@ -4,12 +4,32 @@ import ChangePasswordModal from "./ChangePasswordModal";
 import LogoutModal from "./LogoutModal";
 import { FaAngleLeft } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 import AddCardModal from "../common/AddCardModal";
+=======
+import { CgProfile } from "react-icons/cg";
+>>>>>>> 10704f40d16391bdbd6b1fde5908596f8fe0ecc2
 
 const ProfileSettings = () => {
   const [openPasswordModal, setOpenPasswordModal] = useState(false);
   const [openLogoutModal, setOpenLogoutModal] = useState(false);
+<<<<<<< HEAD
   const [isModalOpen, setIsModalOpen] = useState(false);
+=======
+  const [image, setImage] = useState("");
+
+  const handleUploadImage = () => {
+    document.getElementById("image_input").click();
+  };
+
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const imageURL = URL.createObjectURL(file);
+      setImage(imageURL);
+    }
+  };
+>>>>>>> 10704f40d16391bdbd6b1fde5908596f8fe0ecc2
 
   const handleLogout = () => {
     console.log("User logged out");
@@ -34,20 +54,37 @@ const ProfileSettings = () => {
       </div>
 
       {/* Profile Picture */}
-      <div className="flex items-center gap-6 mb-8">
-        <img
-          src="https://randomuser.me/api/portraits/women/68.jpg"
-          alt="Profile"
-          className="w-24 h-24 rounded-full object-cover"
-        />
+      <div className="flex items-center gap-6 mb-6">
         <div>
-          <h2 className="font-medium text-gray-800">Profile Picture</h2>
-          <p className="text-sm text-gray-500 mb-3">
-            We recommend an image of at least 400x400.
+          <input
+            type="file"
+            id="image_input"
+            className="hidden"
+            onChange={handleFileChange}
+          />
+          <div className="w-[120px] h-[120px] rounded-full border border-gray-300 flex items-center justify-center overflow-hidden">
+            {image === "" ? (
+              <CgProfile className="text-[6rem] text-gray-300" />
+            ) : (
+              <img
+                src={image}
+                alt="profile"
+                className="w-full h-full object-cover"
+              />
+            )}
+          </div>
+        </div>
+        <div>
+          <h2 className="text-lg font-medium text-gray-800">Profile Picture</h2>
+          <p className="text-sm text-gray-500">
+            We recommend at least 400x400px.
           </p>
-          <button className="flex items-center gap-2 px-4 py-2 bg-white border rounded-lg shadow-sm hover:bg-gray-50">
-            <Upload className="w-4 h-4" />
-            Upload Image
+          <button
+            type="button"
+            onClick={handleUploadImage}
+            className="mt-2 px-4 py-2 flex items-center gap-2 rounded-lg bg-gray-100 hover:bg-gray-200 font-medium cursor-pointer duration-300"
+          >
+            <Upload className="text-black w-5 h-5" /> Upload
           </button>
         </div>
       </div>
@@ -102,10 +139,16 @@ const ProfileSettings = () => {
           <label className="block text-sm font-medium text-gray-600 mb-1">
             Cards
           </label>
+<<<<<<< HEAD
         <button onClick={() => setIsModalOpen(true)} className="px-4 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-[#E8F0FB]">
           Add Card
         </button>
         <AddCardModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
+=======
+          <button className="px-4 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-[#E8F0FB]">
+            Add Card
+          </button>
+>>>>>>> 10704f40d16391bdbd6b1fde5908596f8fe0ecc2
         </div>
       </div>
 

@@ -20,7 +20,7 @@ const HomeBanner = () => {
   return (
     <div className="relative w-full pb-6 md:pt-16 lg:pt-36 bg-custom-secondary">
       {/* Image Wrapper with rounded corners */}
-      <div className="w-full h-[580px] md:h-[580px] lg:h-[760px] rounded-t-lg overflow-hidden pt-62">
+      <div className="w-full h-[320px] sm:h-[420px] md:h-[580px] lg:h-[580px] xl:h-[760px] rounded-t-lg overflow-hidden pt-12 md:pt-40 xl:pt-62">
         <img
           src={ImageProvider.banner}
           alt="Tutoring banner"
@@ -29,7 +29,7 @@ const HomeBanner = () => {
       </div>
 
       {/* Banner Content */}
-      <div className="absolute top-[35vh] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center px-4">
+      <div className="absolute top-[20vh] lg:top-[35vh] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center px-4">
         <h1
           ref={titleRef}
           className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 leading-tight"
